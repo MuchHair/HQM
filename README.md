@@ -87,8 +87,8 @@ D: Default, KO: Known object
 
 V-COCO.
 || Scenario 1 | 
-| :--- | :---: | :---: |
-|QPIC + HQM (ResNet50)| 63.6 |
+| :--- | :---: |
+|ours (ResNet50)| 63.6 |
 
 ## Citation
 Please consider citing our papers if it helps your research.
