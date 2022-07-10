@@ -43,8 +43,6 @@ HQM
 ### Pre-trained parameters
 The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/11Fv-m-Y7ffhKhbyRj4iLVg) (pwd:1111)
 
-### Trained parameters
-The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
 
 ## Training
 After the preparation, you can start the training with the following command.
@@ -52,8 +50,10 @@ Note that the number of object classes is 81 because one class is added for miss
 
 If you have multiple GPUs on your machine, you can utilize them to speed up the training. The number of GPUs is specified with the `--nproc_per_node` option. The following command starts the training with 8 GPUs for the HICO-DET training.
 
-We will update the training scheme soon.
+**All important files are available above. We will update the training scheme soon.**
 
+### Trained parameters
+The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
 
 ## Evaluation
 The evaluation is conducted at the end of each epoch during the training. The results are written in `logs/log.txt` like below:
@@ -62,10 +62,11 @@ The evaluation is conducted at the end of each epoch during the training. The re
 ```
 `test_mAP`, `test_mAP rare`, and `test_mAP non-rare` are the results of the default full, rare, and non-rare setting, respectively.
 
-You can also conduct the evaluation with trained parameters as follows.
+You can also conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
+
 ```
 python main.py \
-        --pretrained checkpoint.pth \
+        --pretrained checkpoint_best.pth \
         --hoi \
         --dataset_file hico \
         --hoi_path data/hico_20160224_det \
