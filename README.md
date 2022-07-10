@@ -45,12 +45,7 @@ The annotations file and pre-trained weights can be downloaded [here](https://pa
 
 
 ## Training
-After the preparation, you can start the training with the following command.
-Note that the number of object classes is 81 because one class is added for missing object.
-
-If you have multiple GPUs on your machine, you can utilize them to speed up the training. The number of GPUs is specified with the `--nproc_per_node` option. The following command starts the training with 8 GPUs for the HICO-DET training.
-
-**All important files are available above. We will update the training scheme soon.**
+We provide all important files above and the training scheme will be updated soon.
 
 ### Trained parameters
 The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
