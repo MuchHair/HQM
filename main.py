@@ -30,7 +30,7 @@ def get_args_parser():
     parser.add_argument('--batch_size', default=2, type=int)
     parser.add_argument('--weight_decay', default=1e-4, type=float)
     parser.add_argument('--epochs', default=80, type=int)
-    parser.add_argument('--lr_drop', default=60, type=int)
+    parser.add_argument('--lr_drop', default=55, type=int)
     parser.add_argument('--AJL', action='store_true')
     parser.add_argument('--clip_max_norm', default=0.1, type=float,
                         help='gradient clipping max norm')
@@ -133,7 +133,7 @@ def get_args_parser():
     parser.add_argument('--model_name', default='baseline')
     parser.add_argument('--hard_negative', action='store_true')
     parser.add_argument('--find_unused_parameters', action='store_true')
-    parser.add_argument('--ts_begin', default=3, type=int)
+    parser.add_argument('--ts_begin', default=0, type=int)
     parser.add_argument('--lambda_extra', default=1.1, type=float)
 
     return parser
