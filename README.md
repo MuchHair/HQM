@@ -51,7 +51,7 @@ Note that the number of object classes is 81 because one class is added for miss
 
 If you have multiple GPUs on your machine, you can utilize them to speed up the training. The number of GPUs is specified with the `--nproc_per_node` option. The following command starts the training with 8 GPUs for the HICO-DET training.
 
-
+We will update the training scheme soon.
 
 
 ## Evaluation
