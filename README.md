@@ -17,7 +17,6 @@ Our implementation uses external libraries such as NumPy and PyTorch. You can re
 pip install numpy
 pip install -r requirements.txt
 ```
-Note that this command may dump errors during installing pycocotools, but the errors can be ignored.
 
 ### Dataset
 
