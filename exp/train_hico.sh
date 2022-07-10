@@ -3,7 +3,7 @@ python -m torch.distributed.launch \
 --use_env \
 main.py \
 --pretrained params/detr-r50-pre_inside.pth  \
---output_dir logs/hico/HQM_7_10 \
+--output_dir logs/hico/HQM \
 --hoi \
 --dataset_file hico_gt \
 --model_name HQM \
@@ -24,7 +24,7 @@ python -m torch.distributed.launch \
 --use_env \
 main.py \
 --pretrained params/detr-r50-pre_inside.pth  \
---output_dir logs/hico/HQM_7_10 \
+--output_dir logs/hico/GBS \
 --hoi \
 --dataset_file hico_gt \
 --model_name GBS \
@@ -36,8 +36,7 @@ main.py \
 --set_cost_giou 1 \
 --bbox_loss_coef 2.5 \
 --giou_loss_coef 1 \
---find_unused_parameters \
---AJL
+
 
 
 python -m torch.distributed.launch \
@@ -45,7 +44,7 @@ python -m torch.distributed.launch \
 --use_env \
 main.py \
 --pretrained params/detr-r50-pre_inside.pth  \
---output_dir logs/hico/HQM_7_10 \
+--output_dir logs/hico/AMM \
 --hoi \
 --dataset_file hico_gt \
 --model_name AMM \
