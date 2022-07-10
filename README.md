@@ -1,7 +1,7 @@
 # Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection
 by [Xubin Zhong](https://scholar.google.com/citations?user=Y_ZvaccAAAAJ&hl=zh-CN&oi=sra), [Changxing Ding](https://scholar.google.com/citations?user=8Z8jplgAAAAJ&hl=zh-CN), Zijian Li and [Shaoli Huang](https://scholar.google.com/citations?user=o31BPFsAAAAJ&hl=zh-CN).
 
-This repository contains the official implementation of the paper "[Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection](https://arxiv.org)", which is accepted to ECCV2022.
+This repository contains the official implementation of the paper "[Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection](https://arxiv.org)", which is accepted to **ECCV2022**.
 
 <div align="center">
   <img src=".github/overview.jpg" width="900px" />
