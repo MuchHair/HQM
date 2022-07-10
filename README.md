@@ -38,8 +38,9 @@ HQM
 
 
 ### Pre-trained parameters
-Our QPIC + HQM have to be pre-trained with the COCO object detection dataset. For the HICO-DET training, this pre-training can be omitted by using the parameters of DETR. The parameters can be downloaded from [here](https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth) for the ResNet50 backbone. 
-
+The annotations file,
+pre-trained weights and 
+trained parameters can be downloaded [here]() (pwd:1111)
 
 ### Trained parameters
 The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
@@ -57,10 +58,11 @@ python -m torch.distributed.launch \
         --nproc_per_node=8 \
         --use_env \
         main.py \
-        --pretrained params/detr-r50-pre-hico.pth \
-        --output_dir logs \
+        --pretrained params/detr-r50-pre_inside.pth  \
+        --output_dir logs/hico/HQM_7_10 \
         --hoi \
-        --dataset_file hico \
+        --dataset_file hico_gt \
+        --model_name GBS \
         --hoi_path data/hico_20160224_det \
         --num_obj_classes 80 \
         --num_verb_classes 117 \
@@ -77,10 +79,11 @@ python -m torch.distributed.launch \
         --nproc_per_node=8 \
         --use_env \
         main.py \
-        --pretrained params/detr-r50-pre-hico.pth \
-        --output_dir logs \
+        --pretrained params/detr-r50-pre_inside.pth  \
+        --output_dir logs/hico/HQM_7_10 \
         --hoi \
-        --dataset_file hico \
+        --dataset_file hico_gt \
+        --model_name AMM \
         --hoi_path data/hico_20160224_det \
         --num_obj_classes 80 \
         --num_verb_classes 117 \
@@ -97,10 +100,11 @@ python -m torch.distributed.launch \
         --nproc_per_node=8 \
         --use_env \
         main.py \
-        --pretrained params/detr-r50-pre-hico.pth \
-        --output_dir logs \
+        --pretrained params/detr-r50-pre_inside.pth  \
+        --output_dir logs/hico/HQM_7_10 \
         --hoi \
-        --dataset_file hico \
+        --dataset_file hico_gt \
+        --model_name HQM \
         --hoi_path data/hico_20160224_det \
         --num_obj_classes 80 \
         --num_verb_classes 117 \
@@ -108,21 +112,22 @@ python -m torch.distributed.launch \
         --set_cost_bbox 2.5 \
         --set_cost_giou 1 \
         --bbox_loss_coef 2.5 \
-        --giou_loss_coef 1
+        --giou_loss_coef 1 \
+        --AJL
 ```
 
 
 ## Evaluation
 The evaluation is conducted at the end of each epoch during the training. The results are written in `logs/log.txt` like below:
 ```
-"test_mAP": 0.29061250833779456, "test_mAP rare": 0.21910348492395765, "test_mAP non-rare": 0.31197234650036926
+"test_mAP": 0.313470564574163, "test_mAP rare": 0.26546478777620686, "test_mAP non-rare": 0.32780995244887723
 ```
 `test_mAP`, `test_mAP rare`, and `test_mAP non-rare` are the results of the default full, rare, and non-rare setting, respectively.
 
 You can also conduct the evaluation with trained parameters as follows.
 ```
 python main.py \
-        --pretrained qpic_resnet50_hico.pth \
+        --pretrained checkpoint.pth \
         --hoi \
         --dataset_file hico \
         --hoi_path data/hico_20160224_det \
@@ -132,36 +137,40 @@ python main.py \
         --eval
 ```
 
-For the official evaluation of V-COCO, a pickle file of detection results have to be generated. You can generate the file as follows.
-```
-python generate_vcoco_official.py \
-        --param_path logs/checkpoint.pth \
-        --save_path vcoco.pickle \
-        --hoi_path data/v-coco
-```
 
 ## Results
 HICO-DET.
 || Full (D) | Rare (D) | Non-rare (D) | Full(KO) | Rare (KO) | Non-rare (KO) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-|QPIC (ResNet50)| 29.07 | 21.85 | 31.23 | 31.68 | 24.14 | 33.93 |
-|QPIC (ResNet101)| 29.90 | 23.92 | 31.69 | 32.38 | 26.06 | 34.27 |
+|HOTR + HQM (ResNet50)| 31.34 | 26.54 | 32.78 | 34.09 | 29.63 | 35.42 |
+|QPIC + HQM (ResNet50)| 31.34 | 26.54 | 32.78 | 34.09 | 29.63 | 35.42 |
+|CDN-S + HQM (ResNet101)| 32.47 |28.15 | 33.76 | 35.17 |30.73 |36.50|
 
 D: Default, KO: Known object
 
 V-COCO.
-|| Scenario 1 | Scenario 2 |
+|| Scenario 1 | 
 | :--- | :---: | :---: |
-|QPIC (ResNet50)| 58.8 | 61.0
-|QPIC (ResNet101)| 58.3 | 60.7
+|QPIC + HQM (ResNet50)| 63.6 |
 
 ## Citation
-Please consider citing our paper if it helps your research.
+Please consider citing our papers if it helps your research.
 ```
-@inproceedings{tamura_cvpr2021,
-author = {Tamura, Masato and Ohashi, Hiroki and Yoshinaga, Tomoaki},
-title = {{QPIC}: Query-Based Pairwise Human-Object Interaction Detection with Image-Wide Contextual Information},
-booktitle={CVPR},
-year = {2021},
+@inproceedings{zhong_eccv2022,
+author = {Zhong, Xubin and Ding, Changxing and Li, Zijian and Huang, Shaoli},
+title = {Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection},
+booktitle={ECCV},
+year = {2022},
+}
+
+@InProceedings{Qu_2022_CVPR,
+    author    = {Qu, Xian and Ding, Changxing and Li, Xingao and Zhong, Xubin and Tao, Dacheng},
+    title     = {Distillation Using Oracle Queries for Transformer-Based Human-Object Interaction Detection},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {19558-19567}
 }
 ```
+## Acknowledgement
+[DOQ](https://github.com/SherlockHolmes221/DOQ) [QPIC](https://github.com/hitachi-rd-cv/qpic) 
