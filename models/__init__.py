@@ -13,7 +13,7 @@ def build_model(args):
     elif args.model_name =='AMM':
         from models.Hard_Sample.AMM import build
     elif args.model_name == 'HQM':
-        from models.Hard_Sample.Fuse.hoi_HQM_weight import build
+        from models.Hard_Sample.HQM.hoi_HQM import build
     else:
         assert False
         from .detr import build
