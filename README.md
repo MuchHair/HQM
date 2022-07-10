@@ -59,15 +59,24 @@ The evaluation is conducted at the end of each epoch during the training. The re
 You can also conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
 
 ```
-python main.py \
-        --pretrained checkpoint_best.pth \
-        --hoi \
-        --dataset_file hico \
-        --hoi_path data/hico_20160224_det \
-        --num_obj_classes 80 \
-        --num_verb_classes 117 \
-        --backbone resnet50 \
-        --eval
+python -m torch.distributed.launch \
+--nproc_per_node=8  \
+--use_env \
+main.py \
+--hoi \
+--dataset_file hico_gt \
+--model_name HQM \
+--hoi_path data/hico_20160224_det/ \
+--num_obj_classes 80 \
+--num_verb_classes 117 \
+--backbone resnet50 \
+--set_cost_bbox 2.5 \
+--set_cost_giou 1 \
+--bbox_loss_coef 2.5 \
+--giou_loss_coef 1 \
+--find_unused_parameters \
+--AJL \
+--eval
 ```
 
 
