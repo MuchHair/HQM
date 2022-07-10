@@ -40,7 +40,7 @@ HQM
 ### Pre-trained parameters
 The annotations file,
 pre-trained weights and 
-trained parameters can be downloaded [here]() (pwd:1111)
+trained parameters can be downloaded [here](https://pan.baidu.com/s/1wpGoYJ6WEpAmQen0XPbBEA) (pwd:1111)
 
 ### Trained parameters
 The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
