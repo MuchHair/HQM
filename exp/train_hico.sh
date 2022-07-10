@@ -16,7 +16,8 @@ main.py \
 --bbox_loss_coef 2.5 \
 --giou_loss_coef 1 \
 --find_unused_parameters \
---AJL
+--AJL \
+
 
 
 python -m torch.distributed.launch \
