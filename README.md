@@ -34,11 +34,14 @@ HQM
  |       |   |─ test_hico.json
  |       |   └─ corre_hico.npy
  :       :
+ 
+ |─ params
+ │   └─ detr-r50-pre.pth
 ```
 
 
 ### Pre-trained parameters
-The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/1wpGoYJ6WEpAmQen0XPbBEA) (pwd:1111)
+The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/11Fv-m-Y7ffhKhbyRj4iLVg) (pwd:1111)
 
 ### Trained parameters
 The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
@@ -108,4 +111,4 @@ year = {2022},
 }
 ```
 ## Acknowledgement
-[DOQ](https://github.com/SherlockHolmes221/DOQ) [QPIC](https://github.com/hitachi-rd-cv/qpic) 
+[DOQ](https://github.com/SherlockHolmes221/DOQ), [QPIC](https://github.com/hitachi-rd-cv/qpic) 
