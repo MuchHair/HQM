@@ -1,3 +1,4 @@
+# HQM
 python -m torch.distributed.launch \
 --nproc_per_node=8  \
 --use_env \
@@ -19,7 +20,7 @@ main.py \
 --AJL \
 
 
-
+# GBS
 python -m torch.distributed.launch \
 --nproc_per_node=8  \
 --use_env \
@@ -39,7 +40,7 @@ main.py \
 --giou_loss_coef 1 \
 
 
-
+# AMM
 python -m torch.distributed.launch \
 --nproc_per_node=8  \
 --use_env \
