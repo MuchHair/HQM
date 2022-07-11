@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from util.box_ops import  box_xyxy_to_cxcywh
 from models.backbone import build_backbone
 from models.matcher import build_matcher
-from models.transformer import build_hoi_transformer_ts_qpos_eobj_attention_map
+from models.transformer import build_hoi_transformer_GBS
 from util.box_ops import box_cxcywh_to_xyxy, generalized_box_iou
 from util.misc import (NestedTensor, nested_tensor_from_tensor_list,
                        accuracy, get_world_size, is_dist_avail_and_initialized)
