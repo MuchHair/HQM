@@ -44,10 +44,33 @@ The annotations file and pre-trained weights can be downloaded [here](https://pa
 
 
 ## Training
-We provide all important files above and the training scheme will be updated soon.
+After the preparation, you can start the training with the following command.
+```
+python -m torch.distributed.launch \
+    --nproc_per_node=8  \
+    --use_env \
+    main.py \
+    --pretrained params/detr-r50-pre_inside.pth  \
+    --output_dir logs/hico/HQM \
+    --hoi \
+    --dataset_file hico_gt \
+    --model_name HQM \
+    --hoi_path data/hico_20160224_det/ \
+    --num_obj_classes 80 \
+    --num_verb_classes 117 \
+    --backbone resnet50 \
+    --set_cost_bbox 2.5 \
+    --set_cost_giou 1 \
+    --bbox_loss_coef 2.5 \
+    --giou_loss_coef 1 \
+    --find_unused_parameters \
+    --AJL \
+```
+
 
 ### Trained parameters
 The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
+
 
 ## Evaluation
 The evaluation is conducted at the end of each epoch during the training. The results are written in `logs/log.txt` like below:
