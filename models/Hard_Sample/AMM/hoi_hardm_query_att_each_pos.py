@@ -30,7 +30,7 @@ class DETRHOI(nn.Module):
         # self.query_embed_obj = MLP(512, hidden_dim, hidden_dim, 2)
         self.begin_l = begin_l
 
-    def forward(self, samples: NestedTensor, gt_items=None, target=None, epoch=0):
+    def forward(self, samples: NestedTensor, gt_items=None, target=None, epoch=0, flags=None):
 
         if not isinstance(samples, NestedTensor):
             samples = nested_tensor_from_tensor_list(samples)
