@@ -258,7 +258,7 @@ def main(args):
     for epoch in range(args.start_epoch, args.epochs):
         if args.distributed:
             sampler_train.set_epoch(epoch)
-        if args.model_name =='baseline':
+        if args.model_name == 'baseline':
             train_stats = train_one_epoch(
                 model, criterion, data_loader_train, optimizer, device, epoch,
                 args.clip_max_norm)
@@ -266,12 +266,7 @@ def main(args):
             train_stats = train_one_epoch_gt(
                 model, criterion, data_loader_train, optimizer, device, epoch,
                 args.clip_max_norm, args.AJL)
-        '''
-        else:
-            train_stats = train_one_epoch(
-                model, criterion, data_loader_train, optimizer, device, epoch,
-                args.clip_max_norm)
-        '''
+
         lr_scheduler.step()
         if args.output_dir:
             checkpoint_paths = [output_dir / 'checkpoint.pth']
