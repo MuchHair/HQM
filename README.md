@@ -7,9 +7,10 @@ This repository contains the official implementation of the paper "[Towards Hard
   <img src=".github/overview.jpg" width="900px" />
 </div>
 
+To the best of our knowledge, HQM is the first approach that promotes the robustness of DETR-based models from the perspective of hard example mining. Moreover, HQM is plug-and-play and can be readily applied to many DETR-based HOI detection methods.
+
 ## Preparation
 Code is coming soon.
-
 
 ## Citation
 Please consider citing our papers if it helps your research.
