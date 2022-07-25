@@ -10,7 +10,6 @@ This repository contains the official implementation of the paper "[Towards Hard
 To the best of our knowledge, HQM is the first approach that promotes the robustness of DETR-based models from the perspective of hard example mining. Moreover, HQM is plug-and-play and can be readily applied to many DETR-based HOI detection methods.
 
 ## Preparation
-Code is coming soon.
 
 ### Dependencies
 Our implementation uses external libraries such as NumPy, PyTorch and 8 2080Ti GPUs.You can resolve the dependencies with the following command.
@@ -42,6 +41,27 @@ HQM
 
 ### Pre-trained parameters
 The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/11Fv-m-Y7ffhKhbyRj4iLVg) (pwd:1111)
+
+## Training
+``
+python -m torch.distributed.launch \
+    --nproc_per_node=8  \
+    --use_env \
+    main.py \
+    --hoi \
+    --dataset_file hico_gt \
+    --model_name HQM \
+    --hoi_path data/hico_20160224_det/ \
+    --num_obj_classes 80 \
+    --num_verb_classes 117 \
+    --backbone resnet50 \
+    --set_cost_bbox 2.5 \
+    --set_cost_giou 1 \
+    --bbox_loss_coef 2.5 \
+    --giou_loss_coef 1 \
+    --find_unused_parameters \
+    --AJL 
+```
 
 ## Evaluation
 You can  conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
