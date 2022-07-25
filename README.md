@@ -43,7 +43,8 @@ HQM
 The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/11Fv-m-Y7ffhKhbyRj4iLVg) (pwd:1111)
 
 ## Training
-``
+
+```
 python -m torch.distributed.launch \
     --nproc_per_node=8  \
     --use_env \
