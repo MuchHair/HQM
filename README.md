@@ -65,7 +65,7 @@ python -m torch.distributed.launch \
 ```
 
 ## Evaluation
-You can  conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/13HUv_dsQncZIvQLAEuLavg) (pwd:1111).
+You can  conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/1OjxQguPfLi6I3ff2n9j5pw?pwd=1111#list/path=%2FHQM) (pwd:1111).
 
 ```
 python -m torch.distributed.launch \
