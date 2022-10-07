@@ -40,7 +40,7 @@ HQM
 
 
 ### Pre-trained parameters
-The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/11Fv-m-Y7ffhKhbyRj4iLVg) (pwd:1111)
+The annotations file and pre-trained weights can be downloaded [here](https://pan.baidu.com/s/1OjxQguPfLi6I3ff2n9j5pw?pwd=1111#list/path=%2FHQM).
 
 ## Training
 
@@ -65,7 +65,7 @@ python -m torch.distributed.launch \
 ```
 
 ## Evaluation
-You can  conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/1OjxQguPfLi6I3ff2n9j5pw?pwd=1111#list/path=%2FHQM) (pwd:1111).
+You can  conduct the evaluation with trained parameters as follows. The trained parameters are available [here](https://pan.baidu.com/s/1OjxQguPfLi6I3ff2n9j5pw?pwd=1111#list/path=%2FHQM).
 
 ```
 python -m torch.distributed.launch \
