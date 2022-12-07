@@ -111,7 +111,7 @@ V-COCO.
 |ours (ResNet50)| 63.6 |
 
 ## CDN 
-An efficient code implemenation of GBS on CDN is available.
+An efficient code implemenation of GBS on CDN is available /code_path/CDN/exp/train_hico.sh.
 
 ## Citation
 Please consider citing our papers if it helps your research.
