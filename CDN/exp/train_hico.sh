@@ -17,5 +17,4 @@ python -m torch.distributed.launch \
         --use_nms_filter \
         --model_name CDN_HQM \
         --GT \
-        --hard_stop \
-        --resume exps/CDN_HQM/checkpoint_5.pth
+        --hard_stop
