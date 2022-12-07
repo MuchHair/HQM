@@ -110,7 +110,7 @@ V-COCO.
 | :--- | :---: |
 |ours (ResNet50)| 63.6 |
 
-##CDN 
+## CDN 
 An efficient code implemenation of GBS on CDN is provided.
 
 ## Citation
