@@ -113,6 +113,10 @@ V-COCO.
 ## CDN 
 An efficient code implemenation of GBS on CDN is available /code_path/CDN/exp/train_hico.sh.
 
+<div align="center">
+  <img src=".github/CDN_HQM.jpg" width="450px" />
+</div>
+
 ## Citation
 Please consider citing our papers if it helps your research.
 ```
