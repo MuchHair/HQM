@@ -9,6 +9,14 @@ This repository contains the official implementation of the paper "[Towards Hard
 
 To the best of our knowledge, HQM is the first approach that promotes the robustness of DETR-based models from the perspective of hard example mining. Moreover, HQM is plug-and-play and can be readily applied to many DETR-based HOI detection methods.
 
+## New performance on CDN !!
+An efficient code implemenation of GBS on CDN is available /code_path/CDN/exp/train_hico.sh.
+ Adding GBS, CDN-S can achieve 32.29 mAP within 60 epochs.
+ 
+<div align="center">
+  <img src=".github/CDN_HQM.jpg" width="450px" />
+</div>
+
 ## Preparation
 
 ### Dependencies
@@ -110,13 +118,7 @@ V-COCO.
 | :--- | :---: |
 |ours (ResNet50)| 63.6 |
 
-## CDN 
-An efficient code implemenation of GBS on CDN is available /code_path/CDN/exp/train_hico.sh.
- Adding GBS, CDN-S can achieve 32.29 mAP within 60 epochs.
- 
-<div align="center">
-  <img src=".github/CDN_HQM.jpg" width="450px" />
-</div>
+
 
 ## Citation
 Please consider citing our papers if it helps your research.
