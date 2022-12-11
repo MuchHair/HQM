@@ -112,7 +112,8 @@ V-COCO.
 
 ## CDN 
 An efficient code implemenation of GBS on CDN is available /code_path/CDN/exp/train_hico.sh.
-
+ Adding GBS, CDN-S can achieve 32.29 mAP within 60 epochs.
+ 
 <div align="center">
   <img src=".github/CDN_HQM.jpg" width="450px" />
 </div>
