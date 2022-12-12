@@ -140,4 +140,4 @@ year = {2022},
 }
 ```
 ## Acknowledgement
-[DOQ](https://github.com/SherlockHolmes221/DOQ), [QPIC](https://github.com/hitachi-rd-cv/qpic) , [CDN]{https://github.com/YueLiao/CDN}
+[DOQ](https://github.com/SherlockHolmes221/DOQ), [QPIC](https://github.com/hitachi-rd-cv/qpic) , [CDN](https://github.com/YueLiao/CDN)
