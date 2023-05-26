@@ -104,7 +104,7 @@ The results are like below:
 `test_mAP`, `test_mAP rare`, and `test_mAP non-rare` are the results of the default full, rare, and non-rare setting, respectively.
 
 ## Results
-HICO-DET.
+HOI Detection HICO-DET.
 || Full (D) | Rare (D) | Non-rare (D) | Full(KO) | Rare (KO) | Non-rare (KO) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 |HOTR + HQM (ResNet50)| 25.69 | 24.70 | 25.98 |28.24| 27.35 | 28.51 |
@@ -113,17 +113,16 @@ HICO-DET.
 
 D: Default, KO: Known object
 
-V-COCO.
+HOI Detection V-COCO.
 || Scenario 1 |
 | :--- | :---: |
 |ours (ResNet50)| 63.6 |
 
-COCO.
-||AP | AP_{0.5} | AP_{0.5}  | AP_{0.5} | AP_{0.5}  | AP_{L}  |
+Object Detection COCO.
+||AP | AP_0.5 | AP0.75  | AP_S | AP_M  | AP_{L}  |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-|SMCA| 35.08 |56.47| 35.91|15.14|38.01 |54.50658969140711 |
-|SMCA + HQM (ResNet50)| 32.47 |28.15 | 33.76 | 35.17 |30.73 |36.50|
-
+|SMCA| 35.08 |56.47| 35.91|15.14|38.01 |54.51|
+|SMCA + HQM | 36.481868542855866|57.02|38.19|16.48|40.62|54.91|
 
 
 ## Citation
