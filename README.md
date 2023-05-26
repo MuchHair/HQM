@@ -1,4 +1,4 @@
-# Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection
+# Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection/Object Detection
 by [Xubin Zhong](https://scholar.google.com/citations?user=Y_ZvaccAAAAJ&hl=zh-CN&oi=sra), [Changxing Ding](https://scholar.google.com/citations?user=8Z8jplgAAAAJ&hl=zh-CN), [Zijian Li](https://github.com/ionicbond-lzj) and [Shaoli Huang](https://scholar.google.com/citations?user=o31BPFsAAAAJ&hl=zh-CN).
 
 This repository contains the official implementation of the paper "[Towards Hard-Positive Query Mining for DETR-based Human-Object Interaction Detection](https://arxiv.org/pdf/2207.05293.pdf)", which is accepted to **ECCV2022**.
@@ -118,6 +118,12 @@ V-COCO.
 | :--- | :---: |
 |ours (ResNet50)| 63.6 |
 
+COCO.
+||AP | AP_{0.5} | AP_{0.5}  | AP_{0.5} | AP_{0.5}  | AP_{L}  |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+|SMCA| 35.08 |56.47| 35.91|15.14|38.01 |54.50658969140711 |
+|SMCA + HQM (ResNet50)| 32.47 |28.15 | 33.76 | 35.17 |30.73 |36.50|
+
 
 
 ## Citation
@@ -137,6 +143,14 @@ year = {2022},
     month     = {June},
     year      = {2022},
     pages     = {19558-19567}
+}
+
+@inproceedings{zhang2022accelerating,
+  title={Accelerating DETR convergence via semantic-aligned matching},
+  author={Zhang, Gongjie and Luo, Zhipeng and Yu, Yingchen and Cui, Kaiwen and Lu, Shijian},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={949--958},
+  year={2022}
 }
 ```
 ## Acknowledgement
