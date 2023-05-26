@@ -119,7 +119,7 @@ HOI Detection V-COCO.
 |ours (ResNet50)| 63.6 |
 
 Object Detection COCO.
-||AP | AP_0.5 | AP0.75  | AP_S | AP_M  | AP_{L}  |
+||AP | AP_0.5 | AP_0.75  | AP_S | AP_M  | AP_L  |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 |SMCA| 35.08 |56.47| 35.91|15.14|38.01 |54.51|
 |SMCA + HQM | 36.48|57.02|38.19|16.48|40.62|54.91|
